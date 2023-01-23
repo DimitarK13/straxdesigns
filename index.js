@@ -35,6 +35,14 @@ app.get('/projects/neotek-systems', (req, res) => {
   res.render('projects/neotek-systems');
 });
 
+app.get('/projects/breathing-darkness', (req, res) => {
+  res.render('projects/breathing-darkness');
+});
+
+app.get('/projects/niol', (req, res) => {
+  res.render('projects/niol');
+});
+
 app.use((req, res, next) => {
   res.status(404).render('404');
 });
