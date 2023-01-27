@@ -1,8 +1,18 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
-const app = express();
 
+const nodemailer = require('nodemailer');
+const transporter = nodemailer.createTransport({
+  service: process.env.SERVICE,
+  auth: {
+    user: process.env.USER,
+    pass: process.env.PASS,
+  },
+});
+
+const app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
@@ -42,6 +52,24 @@ app.get('/projects/breathing-darkness', (req, res) => {
 
 app.get('/projects/niol', (req, res) => {
   res.render('projects/niol');
+});
+
+app.post('/', (req, res) => {
+  const { name, email, date } = req.body;
+
+  const options = {
+    from: 'dimikalapocev@gmail.com',
+    to: 'info@straxdesigns.com',
+    subject: `Schedule a Meeting Request by ${name}`,
+    text: `Name: ${name}\nEmail: ${email}\nRequested Date: ${date}`,
+  };
+
+  transporter.sendMail(options, (err, info) => {
+    if (err) console.log(err);
+    console.log(info.response);
+  });
+
+  res.redirect('/');
 });
 
 app.use((req, res, next) => {
