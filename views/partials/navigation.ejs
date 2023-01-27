@@ -1,43 +1,47 @@
-<nav class="nav-mobile" data-target="active">
+<nav class="nav-mobile" style="display: none" data-target="active">
   <ul class="nav-mobile-buttons">
     <li>
       <button id="nav-toggle"><i class="fa-solid fa-bars"></i></button>
     </li>
-    <li><img src="images/logo.png" alt="Strax Designs Logo" /></li>
+    <li>
+      <img src="images/logo.png" alt="Strax Designs Logo" class="logo-mobile" />
+    </li>
     <li>
       <a href="contact-us"><i class="fa-solid fa-phone"></i></a>
     </li>
   </ul>
 
   <ul class="nav-mobile-list">
-    <li class="nav-mobile-list-item"><a href="index">Home.</a></li>
-    <li class="nav-mobile-list-item"><a href="services">Services.</a></li>
-    <li class="nav-mobile-list-item"><a href="about-us">About Us.</a></li>
-    <li class="nav-mobile-list-item"><a href="projects">Projects.</a></li>
+    <li class="nav-mobile-list-item"><a href="/">Home.</a></li>
+    <li class="nav-mobile-list-item"><a href="/services">Services.</a></li>
+    <li class="nav-mobile-list-item"><a href="/about-us">About Us.</a></li>
+    <li class="nav-mobile-list-item"><a href="/projects">Projects.</a></li>
   </ul>
 </nav>
 
 <nav class="nav-desktop" data-target="inactive">
-  <ul class="nav-desktop-list">
+  <ul class="nav-desktop-list text-align-left">
     <li class="nav-desktop-list-item">
       <i class="fa-regular fa-circle-dot"></i
-      ><a href="index" class="uppercase">Home.</a>
+      ><a href="/" class="uppercase">Home.</a>
     </li>
     <li class="nav-desktop-list-item">
       <i class="fa-regular fa-circle-dot"></i
-      ><a href="services" class="uppercase">Services.</a>
+      ><a href="/services" class="uppercase">Services.</a>
     </li>
     <li class="nav-desktop-list-item">
       <i class="fa-regular fa-circle-dot"></i
-      ><a href="about-us" class="uppercase">About Us.</a>
+      ><a href="/about-us" class="uppercase">About Us.</a>
     </li>
     <li class="nav-desktop-list-item">
       <i class="fa-regular fa-circle-dot"></i
-      ><a href="projects" class="uppercase">Projects.</a>
+      ><a href="/projects" class="uppercase">Projects.</a>
     </li>
   </ul>
 
-  <img src="images/logo.png" alt="Strax Designs Logo" />
+  <img src="images/logo.png" alt="Strax Designs Logo" class="logo" />
 
-  <a href="contact-us">Contact Us</a>
+  <a href="contact-us" class="text-vertical contact-us-link uppercase"
+    >Contact Us</a
+  >
 </nav>

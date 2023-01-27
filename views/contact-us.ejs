@@ -1,36 +1,38 @@
 <%- include('partials/header.ejs') %>
-<main>
-  <div class="flex">
-    <button id="back-btn"><i class="fa-solid fa-angle-left"></i></button>
+<div class="flex">
+  <button id="back-btn" class="btn secondary-btn">
+    <i class="fa-solid fa-angle-left"></i>
+  </button>
 
-    <form action="/" method="post">
-      <div>
-        <label for="name" class="uppercase">Name</label
-        ><input type="text" name="name" id="name" placeholder="John Doe" />
-      </div>
-      <div>
-        <label for="email" class="uppercase">Email</label
-        ><input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="johndoe@gmail.com"
-        />
-      </div>
-      <div>
-        <label for="date" class="uppercase">Date</label>
-        <input type="date" name="date" id="date" />
-      </div>
+  <form action="/" method="post" class="contact-us">
+    <div>
+      <label for="name" class="uppercase">Name</label
+      ><input type="text" name="name" id="name" placeholder="John Doe" />
+    </div>
+    <div>
+      <label for="email" class="uppercase">Email</label
+      ><input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="johndoe@gmail.com"
+      />
+    </div>
+    <div>
+      <label for="date" class="uppercase">Date</label>
+      <input type="date" name="date" id="date" />
+    </div>
 
-      <button type="submit" class="btn primary-btn" id="form-submit-btn">
-        Schedule
-      </button>
-    </form>
+    <button type="submit" class="btn primary-btn" id="form-submit-btn">
+      Schedule
+    </button>
+  </form>
 
-    <section for="contact-info">
-      <header id="contact-info">
-        <h2>Contact Information</h2>
-      </header>
+  <section for="contact-info" class="contact-info">
+    <header id="contact-info">
+      <h2 class="uppercase font-weight-regular">Contact Information</h2>
+    </header>
+    <div class="contact-info-items">
       <div class="contact-info-item">
         <i class="fa-solid fa-phone"></i>
         <p class="uppercase">077-961-279</p>
@@ -51,6 +53,6 @@
         <i class="fa-solid fa-envelope"></i>
         <p class="uppercase">info@straxdesigns.com</p>
       </div>
-    </section>
-  </div>
-</main>
+    </div>
+  </section>
+</div>
