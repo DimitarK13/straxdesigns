@@ -1,17 +1,23 @@
-<nav class="nav-mobile" data-target="active">
+<nav class="nav-mobile">
   <ul class="nav-mobile-buttons">
     <li>
-      <button id="nav-toggle"><i class="fa-solid fa-bars"></i></button>
+      <button
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="nav-mobile-list"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </li>
     <li>
       <img src="images/logo.png" alt="Strax Designs Logo" class="logo-mobile" />
     </li>
     <li>
-      <a href="contact-us"><i class="fa-solid fa-phone"></i></a>
+      <a href="/contact-us"><i class="fa-solid fa-phone"></i></a>
     </li>
   </ul>
 
-  <ul class="nav-mobile-list">
+  <ul data-state="closed" class="nav-mobile-list" id="nav-mobile-list">
     <li class="nav-mobile-list-item"><a href="/">Home.</a></li>
     <li class="nav-mobile-list-item"><a href="/services">Services.</a></li>
     <li class="nav-mobile-list-item"><a href="/about-us">About Us.</a></li>
@@ -19,7 +25,7 @@
   </ul>
 </nav>
 
-<nav class="nav-desktop" data-target="inactive">
+<nav class="nav-desktop">
   <ul class="nav-desktop-list text-align-left">
     <li class="nav-desktop-list-item">
       <i class="fa-regular fa-circle-dot"></i

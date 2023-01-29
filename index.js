@@ -18,39 +18,31 @@ app.use(express.static('public'));
 app.use('/projects', express.static('public'));
 
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', { title: 'Stax Designs'});
 });
 
 app.get('/index', (req, res) => {
-  res.render('index');
+  res.render('index', { title: 'Stax Designs'});
 });
 
 app.get('/services', (req, res) => {
-  res.render('services');
+  res.render('services', { title: 'Services | Stax Designs'});
 });
 
 app.get('/about-us', (req, res) => {
-  res.render('about-us');
+  res.render('about-us', { title: 'About Us | Stax Designs'});
 });
 
 app.get('/projects', (req, res) => {
-  res.render('projects');
+  res.render('projects', { title: 'Projects | Stax Designs'});
 });
 
 app.get('/contact-us', (req, res) => {
-  res.render('contact-us');
+  res.render('contact-us', { title: 'Contact Us | Stax Designs'});
 });
 
 app.get('/projects/neotek-systems', (req, res) => {
-  res.render('projects/neotek-systems');
-});
-
-app.get('/projects/breathing-darkness', (req, res) => {
-  res.render('projects/breathing-darkness');
-});
-
-app.get('/projects/niol', (req, res) => {
-  res.render('projects/niol');
+  res.render('projects/neotek-systems', { title: 'Projects | Stax Designs'});
 });
 
 app.post('/', (req, res) => {
@@ -74,7 +66,7 @@ app.post('/', (req, res) => {
 });
 
 app.use((req, res, next) => {
-  res.status(404).render('404');
+  res.status(404).render('404', { title: 'Page Not Found | Stax Designs'});
 });
 
 let port = process.env.PORT;
