@@ -1,49 +1,53 @@
 <%- include('../partials/header.ejs') %>
-<main>
-  <h1 class="uppercase">Projects</h1>
+<h1 class="heading">Projects</h1>
 
-  <div>
-    <button class="btn secondary-btn" id="back-btn-projects">
-      <i class="fa-solid fa-angle-left"></i>
-    </button>
+<div>
+  <a href="/projects" class="btn secondary-btn">
+    <i class="fa-solid fa-angle-left"></i>
+  </a>
 
-    <h2 class="uppercase">Neotek Systems</h2>
-    <img src="" alt="" />
+  <h2 class="uppercase sub-heading">Neotek Systems</h2>
+  <div class="image-full-width-block">
+    <img src="images/test.png" alt="" class="image-full-width" />
+  </div>
 
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem omnis
-      voluptatum libero aliquam optio rerum sit nulla, nobis accusamus eligendi
-      molestiae fuga neque voluptas dolorem, laborum fugit est error commodi!
-    </p>
+  <p class="max-width-65">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem omnis
+    voluptatum libero aliquam optio rerum sit nulla, nobis accusamus eligendi
+    molestiae fuga neque voluptas dolorem, laborum fugit est error commodi!
+  </p>
 
-    <a href="#" target="_blank"><i class="fa-solid fa-globe"></i></a>
+  <a href="#" target="_blank" class="website-icon btn"
+    ><i class="fa-solid fa-globe"></i
+  ></a>
 
-    <div class="grid-area">
-      <img src="" alt="" /><img src="" alt="" />
+  <div class="grid-area">
+    <img src="images/test.png" alt="" /><img src="images/test.png" alt="" />
 
-      <span class="decorative" aria-label="hidden">font:</span>
+    <span class="decorative opacity-10" aria-label="hidden">font:</span>
 
-      <div class="sub-grid-area">
-        <div class="sub-grid-area-one">
-          <h3 class="uppercase">Font:</h3>
-          <p class="uppercase font-courier-new">Courier New</p>
-          <p class="uppercase font-courier-new">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam
-            inventore officiis laboriosam voluptates rem! Laudantium et soluta
-            officia nostrum delectus!
-          </p>
-        </div>
+    <div class="sub-grid-area">
+      <div class="sub-grid-area-one">
+        <h3 class="uppercase">Font:</h3>
+        <p class="uppercase font-courier-new clr-brand">Courier New</p>
+        <p class="uppercase font-courier-new">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam
+          inventore officiis laboriosam voluptates rem! Laudantium et soluta
+          officia nostrum delectus!
+        </p>
+      </div>
 
-        <div class="sub-grid-area-two">
+      <div class="sub-grid-area-two">
+        <div>
           <p class="uppercase font-courier-new">abcdefghijklmnopqrstuvwxyz</p>
           <p class="uppercase font-courier-new opacity-10 font-size-s">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non harum
             veniam saepe voluptatem, veritatis aut ipsa vero cumque ipsum
             molestiae?
           </p>
-          <p class="uppercase font-courier-new text-vertical">0123456789</p>
         </div>
+        <p class="uppercase font-courier-new text-vertical">0123456789</p>
       </div>
     </div>
   </div>
-</main>
+</div>

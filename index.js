@@ -1,14 +1,13 @@
-require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
 
 const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
-  service: process.env.SERVICE,
+  service: 'gmail',
   auth: {
-    user: process.env.USER,
-    pass: process.env.PASS,
+    user: 'dimikalapocev@gmail.com',
+    pass: 'huecssjdcmcatbmi',
   },
 });
 
@@ -69,7 +68,9 @@ app.post('/', (req, res) => {
     console.log(info.response);
   });
 
-  res.redirect('/');
+  setTimeout(() => {
+    res.redirect('/');
+  }, 3000);
 });
 
 app.use((req, res, next) => {
