@@ -4,7 +4,7 @@
     <i class="fa-solid fa-angle-left"></i>
   </button>
 
-  <form action="/" method="post" class="contact-us">
+  <form action="/contact-us" method="post" class="contact-us" id="form">
     <div>
       <label for="name" class="uppercase">Name</label
       ><input type="text" name="name" id="name" placeholder="John Doe" />
@@ -23,7 +23,7 @@
       <input type="date" name="date" id="date" />
     </div>
 
-    <button type="submit" class="btn primary-btn" id="form-submit-btn">
+    <button disabled type="submit" class="btn primary-btn" id="form-submit-btn">
       Schedule
     </button>
   </form>
@@ -77,9 +77,10 @@
 </div>
 
 <script>
-  const backBtn = document.getElementById("back-btn");
+  const backBtn = document.getElementById('back-btn');
 
-  backBtn.addEventListener("click", () => {
+  backBtn.addEventListener('click', () => {
     history.back();
   });
 </script>
+<script src="scripts/form-validation.js"></script>

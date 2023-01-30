@@ -14,38 +14,39 @@ const transporter = nodemailer.createTransport({
 const app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use('/projects', express.static('public'));
 
 app.get('/', (req, res) => {
-  res.render('index', { title: 'Stax Designs'});
+  res.render('index', { title: 'Stax Designs' });
 });
 
 app.get('/index', (req, res) => {
-  res.render('index', { title: 'Stax Designs'});
+  res.render('index', { title: 'Stax Designs' });
 });
 
 app.get('/services', (req, res) => {
-  res.render('services', { title: 'Services | Stax Designs'});
+  res.render('services', { title: 'Services | Stax Designs' });
 });
 
 app.get('/about-us', (req, res) => {
-  res.render('about-us', { title: 'About Us | Stax Designs'});
+  res.render('about-us', { title: 'About Us | Stax Designs' });
 });
 
 app.get('/projects', (req, res) => {
-  res.render('projects', { title: 'Projects | Stax Designs'});
+  res.render('projects', { title: 'Projects | Stax Designs' });
 });
 
 app.get('/contact-us', (req, res) => {
-  res.render('contact-us', { title: 'Contact Us | Stax Designs'});
+  res.render('contact-us', { title: 'Contact Us | Stax Designs' });
 });
 
 app.get('/projects/neotek-systems', (req, res) => {
-  res.render('projects/neotek-systems', { title: 'Projects | Stax Designs'});
+  res.render('projects/neotek-systems', { title: 'Projects | Stax Designs' });
 });
 
-app.post('/', (req, res) => {
+app.post('/contact-us', (req, res) => {
   const { name, email, date } = req.body;
 
   const options = {
@@ -66,7 +67,7 @@ app.post('/', (req, res) => {
 });
 
 app.use((req, res, next) => {
-  res.status(404).render('404', { title: 'Page Not Found | Stax Designs'});
+  res.status(404).render('404', { title: 'Page Not Found | Stax Designs' });
 });
 
 let port = process.env.PORT;
