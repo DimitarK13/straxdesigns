@@ -64,7 +64,7 @@
 
     <div class="carousel-container">
       <div id="carousel" class="carousel">
-        <div class="carousel-item">
+        <div class="carousel-item" data-state="current">
           <div class="carousel-item-flex">
             <i class="fa-solid fa-users"></i>
             <h3>Meet Up</h3>
@@ -74,7 +74,7 @@
             do.
           </p>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" data-state="next">
           <div class="carousel-item-flex">
             <i class="fa-solid fa-record-vinyl"></i>
             <h3>Analyze</h3>
@@ -101,7 +101,7 @@
           </div>
           <p>If you are happy with the design, we proceed to code it.</p>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" data-state="previous">
           <div class="carousel-item-flex">
             <i class="fa-solid fa-circle-check"></i>
             <h3>Finish</h3>
@@ -113,9 +113,9 @@
         </div>
       </div>
       <div class="carousel-buttons">
-        <button class="btn secondary-btn" id="carousel-item-next">
+        <button class="btn secondary-btn" id="carousel-item-prev">
           <i class="fa-solid fa-angle-left"></i></button
-        ><button class="btn secondary-btn" id="carousel-item-prev">
+        ><button class="btn secondary-btn" id="carousel-item-next">
           <i class="fa-solid fa-angle-right"></i>
         </button>
       </div>
@@ -124,3 +124,4 @@
 </main>
 
 <script src="scripts/toggle-packages.js"></script>
+<script src="scripts/carousel.js"></script>
