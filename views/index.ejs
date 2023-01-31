@@ -17,3 +17,32 @@
 </main>
 
 <script src="scripts/toggle-learn-more.js"></script>
+<script>
+  const tl = gsap.timeline();
+
+  function reload() {
+    tl.from('.hero-heading', {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+    });
+    tl.from('.btn', {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+    });
+  }
+
+  const btn = document.getElementById('learn-more');
+
+  btn.addEventListener('click', () => {
+    gsap.from('.hero-learn-more', {
+      opacity: 0,
+      duration: 1,
+    });
+
+    reload();
+  });
+
+  reload();
+</script>

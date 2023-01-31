@@ -103,6 +103,10 @@ main {
   margin-inline: auto;
 }
 
+main.margin {
+  margin-block: 7.5rem;
+}
+
 button {
   background-color: transparent;
   border: none;
@@ -147,6 +151,29 @@ section {
   text-transform: uppercase;
 
   text-shadow: 4px 4px 0 rgb(0 0 0 / 0.25);
+}
+
+.heading-animate {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+
+  animation: animate-heading 2s ease-in-out forwards;
+}
+
+@keyframes animate-heading {
+  50% {
+    opacity: 1;
+    top: 50%;
+    font-size: clamp(2.5rem, 5vw + 1rem, var(--fs-900));
+  }
+  100% {
+    top: 2rem;
+    opacity: 1;
+    font-size: 1.5rem;
+  }
 }
 
 .sub-heading {
@@ -299,10 +326,19 @@ section {
   left: 50%;
   top: 2rem;
   transform: translateX(-50%);
+  animation: remove-logo 500ms ease-in-out forwards 1s;
 }
 
 .logo-mobile {
   width: 2rem;
+
+  animation: remove-logo 500ms ease-in-out forwards 1s;
+}
+
+@keyframes remove-logo {
+  to {
+    opacity: 0;
+  }
 }
 
 .nav-mobile-buttons {

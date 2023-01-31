@@ -1,8 +1,7 @@
 <%- include('partials/header.ejs') %> <%- include('partials/navigation.ejs') %>
 
-<main>
-  <h1 class="heading">Services</h1>
-
+<h1 class="heading heading-animate">Services</h1>
+<main class="margin">
   <section for="web-design">
     <header id="web-design">
       <h2 class="uppercase sub-heading">Web Design</h2>
@@ -125,3 +124,22 @@
 
 <script src="scripts/toggle-packages.js"></script>
 <script src="scripts/carousel.js"></script>
+<script>
+  gsap.from('main', {
+    opacity: 0,
+    duration: 2,
+    delay: 2,
+  });
+
+  const btn = document.querySelectorAll('.btn');
+
+  btn.forEach((button) => {
+    button.addEventListener('click', () => {
+      gsap.from('.details-item', {
+        opacity: 0,
+        y: 15,
+        duration: 1,
+      });
+    });
+  });
+</script>

@@ -1,9 +1,16 @@
 <%- include('partials/header.ejs') %> <%- include('partials/navigation.ejs') %>
+<h1 class="heading heading-animate">Projects</h1>
 
-<main>
-  <h1 class="heading">Projects</h1>
-
+<main class="margin">
   <a href="neotek-systems" class="heading text-outline" style="margin-top: 6rem"
     >Neotek System</a
   >
 </main>
+
+<script>
+  gsap.from('main', {
+    opacity: 0,
+    duration: 2,
+    delay: 2,
+  });
+</script>
