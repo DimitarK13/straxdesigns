@@ -27,23 +27,23 @@ app.get('/index', (req, res) => {
 });
 
 app.get('/services', (req, res) => {
-  res.render('services', { title: 'Services | Stax Designs' });
+  res.render('services', { title: 'Services | Strax Designs' });
 });
 
 app.get('/about-us', (req, res) => {
-  res.render('about-us', { title: 'About Us | Stax Designs' });
+  res.render('about-us', { title: 'About Us | Strax Designs' });
 });
 
 app.get('/projects', (req, res) => {
-  res.render('projects', { title: 'Projects | Stax Designs' });
+  res.render('projects', { title: 'Projects | Strax Designs' });
 });
 
 app.get('/contact-us', (req, res) => {
-  res.render('contact-us', { title: 'Contact Us | Stax Designs' });
+  res.render('contact-us', { title: 'Contact Us | Strax Designs' });
 });
 
 app.get('/projects/neotek-systems', (req, res) => {
-  res.render('projects/neotek-systems', { title: 'Projects | Stax Designs' });
+  res.render('projects/neotek-systems', { title: 'Projects | Strax Designs' });
 });
 
 app.post('/contact-us', (req, res) => {
@@ -67,7 +67,7 @@ app.post('/contact-us', (req, res) => {
 });
 
 app.use((req, res, next) => {
-  res.status(404).render('404', { title: 'Page Not Found | Stax Designs' });
+  res.status(404).render('404', { title: 'Page Not Found | Strax Designs' });
 });
 
 let port = process.env.PORT;
