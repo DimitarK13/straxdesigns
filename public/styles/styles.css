@@ -8,8 +8,8 @@
   --fw-500: 500;
   --fw-700: 700;
 
-  --ff-headings: 'Montserrat Alternates', system-ui, sans-serif;
-  --ff-body: 'Montserrat', system-ui, sans-serif;
+  --ff-headings: "Montserrat Alternates", system-ui, sans-serif;
+  --ff-body: "Montserrat", system-ui, sans-serif;
 
   --fs-200: 0.875rem;
   --fs-300: 1.125rem;
@@ -226,6 +226,13 @@ section {
   border-radius: 100vw;
 }
 
+.btn:hover:focus,
+.secondary-btn:focus:hover {
+  border: none;
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-brand-900);
+}
+
 .text-vertical {
   writing-mode: vertical-rl;
   text-orientation: upright;
@@ -384,15 +391,15 @@ section {
   font-size: var(--fs-500);
 }
 
-.nav-mobile-list[data-state='opened'] {
+.nav-mobile-list[data-state="opened"] {
   animation: clipPathCircleOpen 500ms ease-in-out forwards;
   display: flex;
 }
 
-.nav-mobile-list[data-state='closing'] {
+.nav-mobile-list[data-state="closing"] {
   animation: clipPathCircleClose 500ms ease-in-out forwards;
 }
-.nav-mobile-list[data-state='closed'] {
+.nav-mobile-list[data-state="closed"] {
   display: none;
 }
 
@@ -584,7 +591,7 @@ section {
   position: absolute;
 }
 
-.carousel-item[data-state='current'] {
+.carousel-item[data-state="current"] {
   display: block;
 
   opacity: 1;
@@ -592,14 +599,14 @@ section {
   transform: translateX(-50%);
 }
 
-.carousel-item[data-state='previous'] {
+.carousel-item[data-state="previous"] {
   display: block;
   opacity: 0.15;
   left: -300px;
   top: 50px;
 }
 
-.carousel-item[data-state='next'] {
+.carousel-item[data-state="next"] {
   display: block;
   opacity: 0.15;
   right: -300px;
@@ -705,7 +712,7 @@ section {
 }
 
 .font-courier-new {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 @media (min-width: 1000px) {
