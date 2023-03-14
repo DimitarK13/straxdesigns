@@ -226,9 +226,10 @@ section {
   border-radius: 100vw;
 }
 
-.btn:hover:focus,
-.secondary-btn:focus:hover {
-  border: none;
+.primary-btn:hover,
+.primary-btn:focus,
+.secondary-btn:focus,
+.secondary-btn:hover {
   background-color: var(--clr-neutral-100);
   color: var(--clr-brand-900);
 }
